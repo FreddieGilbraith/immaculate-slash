@@ -59,8 +59,11 @@ function Home() {
 				value={ship}
 			/>
 			<Section name="Section 1" id="1" update={update} value={section1} />
+			{section1.split("\n").slice(-1)[0]}
 			<Section name="Section 2" id="2" update={update} value={section2} />
+			{section2.split("\n").slice(-1)[0]}
 			<Section name="Section 3" id="3" update={update} value={section3} />
+			{section3.split("\n").slice(-1)[0]}
 			<br />
 			<hr />
 			<output
@@ -69,7 +72,7 @@ function Home() {
 					borderStyle: "soild",
 					margin: 8,
 					padding: 8,
-					whiteSpace: "pre",
+					whiteSpace: "pre-wrap",
 				}}
 			>
 				{output}
